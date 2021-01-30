@@ -4,7 +4,7 @@ import React from "react";
 function Result({ result, openPopup }) {
   return (
     <div className="card" onClick={() => openPopup(result.Title)}>
-      <img className="img-top-card" src={result.Poster} alt="" />
+      <img className="img-top-card" src={result.Poster} alt={result.Title} />
       <div className="cardText">
         <p className="title">{result.Title}</p>
         <p className="rating">{result.Year}</p>

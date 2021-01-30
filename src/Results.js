@@ -3,7 +3,6 @@ import "./App.css";
 import Result from "./Result";
 
 function Results({ results, openPopup }) {
-  console.log(results);
   return (
     <section className="results">
       {results.map((result) => (
