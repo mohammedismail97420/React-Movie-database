@@ -49,6 +49,14 @@ function App() {
 
   return (
     <div className="App">
+      <a
+        className="tag"
+        href="https://github.com/mohammedismail97420/React-Movie-database"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Github
+      </a>
       <h1 className="heading center">Movie Database</h1>
       <Search handleInput={handleInput} search={search} />
       <Results results={state.results} openPopup={openPopup} />

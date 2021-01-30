@@ -6,6 +6,7 @@
   transition: all ease 0.5s;
   margin: 15px;
   cursor: pointer;
+  background-color: white;
 }
 
 .card:hover {
