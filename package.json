@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "movie-database",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
