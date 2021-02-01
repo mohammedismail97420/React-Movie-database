@@ -10,7 +10,7 @@
 
 .heading {
   margin-top: 50px;
-  color: white;
+  color: rgb(18, 21, 37);
 }
 
 .inputContainer {
@@ -22,13 +22,15 @@
 .searchInput {
   padding: 15px;
   display: block;
-  border-radius: 15px;
-  border: none;
+  border-radius: 50px;
+  border: 2px solid rgb(18, 21, 37);
   outline: none;
   box-shadow: none;
   width: 100%;
   max-width: 600px;
   font-size: 25px;
+  color: rgb(18, 21, 37);
+  background-color: #bab7ff;
 }
 
 .results {
@@ -47,41 +49,28 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   position: fixed;
-  top: 0%;
-  left: 50%;
-  width: 500px;
-  transform: translate(-50%);
+  width: 700px;
   background: rgb(255, 255, 255);
-  overflow: hidden;
   padding: 50px;
-  margin: 25px 0 0 0;
   border-radius: 25px;
-}
-
-.content h2,
-.content p {
-  text-align: center;
+  animation: popup 0.5s;
+  overflow: auto;
 }
 
 .content p {
   margin: 15px 0;
 }
 
-.content .plot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .content .plot img {
   width: 200px;
-  text-align: center;
-  margin: auto;
+  margin-right: 50px;
 }
 
 .close {
@@ -98,7 +87,7 @@
 }
 
 .notFound {
-  color: white;
+  color: rgb(18, 21, 37);
   text-align: center;
   font-size: large;
 }
@@ -116,7 +105,7 @@
   padding-left: 25px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .content {
     top: 0;
     right: 0;
@@ -126,8 +115,44 @@
     max-height: 100vh;
     min-width: 100vw;
     min-height: 100vh;
-    transform: none;
     margin: 0;
     border-radius: 0;
+    overflow: auto;
   }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .row .col span {
+    font-weight: bold;
+  }
+
+  .content .plot img {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.row {
+  display: flex;
+  flex: 1 12;
+}
+
+.row .col span {
+  font-weight: bold;
 }

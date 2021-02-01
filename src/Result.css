@@ -1,21 +1,23 @@
 .card {
   width: 300px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 25px;
+  box-shadow: 0 0 30px #bab7ff;
   overflow: hidden;
   transition: all ease 0.5s;
   margin: 15px;
   cursor: pointer;
   background-color: white;
+  animation: revealResult 0.5s;
 }
 
 .card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 30px #8480ff;
 }
 .img-top-card {
   width: 300px;
   height: 300px;
   transition: all ease 0.5s;
+  line-height: 50px;
+  text-align: center;
 }
 
 .cardText {
@@ -42,4 +44,13 @@
 .cardText .rating {
   color: rgb(71, 71, 71);
   font-size: 18px;
+}
+
+@keyframes revealResult {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

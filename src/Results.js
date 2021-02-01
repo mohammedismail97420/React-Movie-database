@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Result from "./Result";
 
-function Results({ results, openPopup, inputValue }) {
+function Results({ results, openPopup }) {
   if (results !== undefined) {
     return (
       <section className="results">

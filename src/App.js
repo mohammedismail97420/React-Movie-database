@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 import Search from "./Search";
 import Results from "./Results";
 import Popup from "./Popup";
@@ -12,11 +11,11 @@ function App() {
     selected: {},
   });
 
-  const apiurl = "https://www.omdbapi.com/?i=tt3896198&apikey=cf2e4532";
+  const apiUrl = "https://www.omdbapi.com/?i=tt3896198&apikey=cf2e4532";
 
   const search = (e) => {
     if (e.key === "Enter") {
-      axios(apiurl + "&s=" + state.s).then(({ data }) => {
+      axios(apiUrl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
         setState((prevState) => {
           return { ...prevState, results: results };
@@ -33,7 +32,7 @@ function App() {
   };
 
   const openPopup = (id) => {
-    axios(apiurl + "&t=" + id).then(({ data }) => {
+    axios(apiUrl + "&t=" + id).then(({ data }) => {
       let result = data;
       setState((prevState) => {
         return { ...prevState, selected: result };
