@@ -15,6 +15,7 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter") {
+      e.target.blur();
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
         setState((prevState) => {
