@@ -14,4 +14,3 @@ yarn-error.log*
 .npm/
 yarn.lock
 .eslintcache
-package-lock.json
